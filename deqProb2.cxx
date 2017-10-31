@@ -1,10 +1,4 @@
-#include <iostream>
-#include <deque>
-#include <vector>
-#include <climits>
-#include <cmath>
-#include <cstdio>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
