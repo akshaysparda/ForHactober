@@ -1,8 +1,4 @@
-#include <vector>
-#include <iostream>
-#include <queue>
-#include <cstdlib>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
