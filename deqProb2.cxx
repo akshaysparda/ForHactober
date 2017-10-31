@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main () {
@@ -11,16 +10,14 @@ int main () {
     cout << "Enter windowSize " ;
     cin >> windowSize;
 
-    while (cin >> input) {
+    while (cin >> input) 
         vec.push_back(input);
-    }
 
     vector<int>:: iterator it;
     int ans = INT_MAX;
 
-    if (windowSize == 1) {
+    if (windowSize == 1) 
         ans = *min_element (vec.begin(), vec.end());
-    }
     else {
         for (int i = 0; i < vec.size(); i++) {
 
@@ -41,6 +38,5 @@ int main () {
                 ans = min (ans, vec[dq.front()]);
         }
     }
-
     cout << "Answer is " << ans << endl;
 }
