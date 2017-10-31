@@ -43,9 +43,9 @@ int main()
     // Can include all elements when remOfSum is 0, happens outside the conditional
     if (remOfSum == 1) {
         // Pop one element from moduloOneQ if non-empty, else pop 2 elements from moduloTwoQ
-        if (!moduloOneQ.empty()) { // pop one element from moduloOneQ
+        if (!moduloOneQ.empty())  // pop one element from moduloOneQ
             moduloOneQ.pop();
-        }
+        
         else if (moduloTwoQ.size() >= 2) { // pop 2 elements from moduleTwoQ
             moduloTwoQ.pop();
             moduloTwoQ.pop();
@@ -57,9 +57,9 @@ int main()
     }
     else if (remOfSum == 2) {
         // Pop one element from moduloTwoQ if non-empty, else pop 2 elements from moduloOneQ
-        if (!moduloTwoQ.empty()) { // pop one element from moduloTwoQ
+        if (!moduloTwoQ.empty())  // pop one element from moduloTwoQ
             moduloTwoQ.pop();
-        }
+       
         else if (moduloOneQ.size() >= 2) { // pop 2 elements from moduleOneQ
             moduloOneQ.pop();
             moduloOneQ.pop();
@@ -92,8 +92,8 @@ int main()
         for (int i = 0; i < resultArray.size(); i++)
             cout << resultArray[i];
     }
-    else {
+    else 
             cout << "No multiple of 3 can be formed ";
-    }
+   
     cout << endl;
 }
