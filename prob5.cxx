@@ -1,3 +1,63 @@
+/*
+//Simple C code:
+#include <stdio.h>
+#include <malloc.h>
+void manipulate(int *countOfDigits, int* ans, int x, int y)
+{
+	if(countOfDigits[x]>=countOfDigits[y]){
+		ans[y]+=countOfDigits[y];
+		ans[x]+=countOfDigits[y];
+		countOfDigits[x]-=countOfDigits[y];
+		countOfDigits[y]=0;
+	}else{
+		ans[y]+=countOfDigits[x];
+		ans[x]+=countOfDigits[x];
+		countOfDigits[x]=0;
+		countOfDigits[y]-=countOfDigits[x];
+	}
+}
+int main(int argc, char const *argv[])
+{
+	int n;
+	scanf("%d",&n);
+	int* arr;
+	if(NULL==(arr=(int *)malloc(n*sizeof(int))))
+		return printf("Out of Memory\n");
+	for (int i = 0; i < n; ++i)
+		scanf("%d",&arr[i]);
+	int* countOfDigits;
+	if(NULL==(countOfDigits=(int *)malloc(10*sizeof(int))))
+		return printf("Out of Memory\n");
+	for (int i = 0; i < 10; ++i)
+		countOfDigits[i]=0;
+	for (int i = 0; i < n; ++i)
+		countOfDigits[arr[i]]++;
+	int* ans, c=0;
+	if(NULL==(ans=(int *)malloc(10*sizeof(int))))
+		return printf("Out of Memory\n");
+	for (int i = 0; i < n; ++i)
+		ans[i]=0;
+	ans[9]=countOfDigits[9];
+	manipulate(countOfDigits, ans, 7, 8);
+	manipulate(countOfDigits, ans, 4, 8);
+	manipulate(countOfDigits, ans, 1, 8);
+	manipulate(countOfDigits, ans, 5, 7);
+	manipulate(countOfDigits, ans, 2, 7);
+	ans[6]=countOfDigits[6];
+	manipulate(countOfDigits, ans, 4, 5);
+	manipulate(countOfDigits, ans, 1, 5);	
+	manipulate(countOfDigits, ans, 2, 4);
+	ans[3]=countOfDigits[3];
+	manipulate(countOfDigits, ans, 1, 2);
+	ans[0]=countOfDigits[0];
+	for (int i = 9; i >= 0; --i){
+		for (int j = 0; j < ans[i]; ++j)
+			printf("%d",i);
+	}
+	printf("\n");
+	return 0;
+}
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
